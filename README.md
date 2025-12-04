@@ -58,7 +58,7 @@ This portfolio showcases projects, skills, contact information, and a smooth scr
 ## 📬 Contact
 
 **Prince Chauhan**  
-Web Developer  
+Full Stack Developer  
 Email: erprincechauhan@gmail.com  
 GitHub: https://github.com/princechauhann0  
 LinkedIn: https://www.linkedin.com/in/prince-chauhan-692870370/
