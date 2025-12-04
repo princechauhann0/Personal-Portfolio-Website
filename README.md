@@ -71,12 +71,6 @@ This portfolio showcases projects, skills, contact information, and a smooth scr
   https://princechauhann0.github.io/portfolio/
 ```
 
-### Netlify / Vercel
-- Drag and drop the folder to Netlify  
-- OR import repo directly into Vercel  
-
----
-
 ## 📬 Contact
 
 **Prince Chauhan**  
