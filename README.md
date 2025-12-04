@@ -19,21 +19,41 @@ This portfolio showcases projects, skills, contact information, and a smooth scr
 
 ## 🛠️ Technologies Used
 
-- HTML5  
-- CSS3 (Flexbox & Grid)  
-- JavaScript (ES6)  
-- Typed.js (typing animation)  
+# Frontend
+- HTML5
+- CSS3 (Flexbox, Grid)
+- JavaScript (ES6)
+- Typed.js (typing animation)
+
+# Backend
+- Flask (Python backend)
+- REST API (Contact form endpoint)
+
+# Database
+- Firebase Firestore (store contact messages)
+
+# Email Service
+- Gmail SMTP (send messages directly to inbox)
+
+# Hosting / Deployment
+- GitHub Pages (frontend)
+- Render (for Flask backend)
+
 ---
 
 ## 📦 Setup Instructions
 
 1. Clone the repository:
-   git clone https://github.com/<your-username>/<your-repo-name>.git
+   ```bash
+   git clone https://github.com/princechauhann0/portfolio.git
+   ```
 
-2. Open the folder:
+3. Open the folder:
+```bash
    cd portfolio
+```
 
-3. Open `index.html` in your browser:
+5. Open `index.html` in your browser:
    start index.html     # Windows  
    open index.html      # Mac  
    xdg-open index.html  # Linux  
@@ -46,8 +66,10 @@ This portfolio showcases projects, skills, contact information, and a smooth scr
 1. Go to **Settings → Pages**  
 2. Select branch: `main`  
 3. Save  
-4. Your site will be live at:  
-   https://<your-username>.github.io/<repo-name>/
+4. Your site will be live at:
+  ```bash
+  https://princechauhann0.github.io/portfolio/
+```
 
 ### Netlify / Vercel
 - Drag and drop the folder to Netlify  
