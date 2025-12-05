@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prince Chauhan — Portfolio</title>
+  <!-- Import Poppins font for the page -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <!-- main hero intro -->
+  <header id="intro" class="heroContainer">
+    <div class="heroGrid" aria-hidden="true"></div>
+    <div class="heroVignette" aria-hidden="true"></div>
+    <div class="contentWrap">
+      <div class="heroInner">
+        <div class="freelanceTag">
+          <span>Available for freelance work</span>
+        </div>
+        <h1 class="mainTitle">
+          Hi, I'm <span id="element"></span>
+        </h1>
+        <p class="subTitle">Python Developer — AI & Automation | Backend Systems </p>
+        <p class="heroText">
+          I build smart, efficient applications using Python, Flask, APIs, automation, and clean design principles.
+          I enjoy turning ideas into real, working solutions that solve problems and provide great user experiences.
+        </p>
+        <div class="heroBtnRow">
+          <button class="primaryBtn" onclick="scrollToSection('work')">View Projects</button>
+          <button class="outlineBtn" onclick="scrollToSection('contact-section')">Contact Me</button>
+        </div>
+        <nav class="heroSocialRow">
+          <a href="https://github.com/princechauhann0" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <!-- GitHub SVG Icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/prince-chauhan-692870370/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="mailto:erprincechauhan@gmail.com" aria-label="Email">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+    <button class="scrollIndicator" onclick="scrollToSection('profile-section')" aria-label="Scroll Down">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="12" y1="5" x2="12" y2="19" />
+        <polyline points="19 12 12 19 5 12" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- About Section -->
+  <main id="profile-section" class="aboutSection">
+    <div class="container">
+      <div class="aboutContent">
+        <header class="aboutHeader">
+          <span class="aboutLabel">About</span>
+          <div class="aboutRule"></div>
+        </header>
+        <div class="aboutMain">
+          <div class="aboutSummary">
+            <p class="aboutLead">
+              I'm a Python developer who loves building smart, efficient applications — from automation tools to backend
+              APIs and AI-powered features.
+            <p class="aboutDetail">
+              Over the past two years, I’ve created 10+ hands-on projects, including an AI-powered loan approval system,
+              contact & automation tools, and full Python-based applications. Through these projects, I’ve built strong
+              skills in Python, Flask, REST APIs, Firebase, automation, and backend development.<br><br>
+
+              I focus on writing clean, maintainable code and creating solutions that are efficient, scalable, and
+              meaningful.
+            </p>
+          </div>
+          <div class="aboutHighlights">
+            <div class="highLightCard">
+              <h4>Philosophy</h4>
+              <p>Every line of code should serve a purpose. Every design decision should enhance the user experience.
+              </p>
+            </div>
+            <div class="highLightCard">
+              <h4>Approach</h4>
+              <p>I focus on building practical, real-world solutions with clean backend logic, smooth user interfaces,
+                and responsive modern layouts.</p>
+            </div>
+            <div class="highLightCard">
+              <h4>Goal</h4>
+              <p>To build intelligent applications that automate workflows, improve efficiency, and make an impact.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skillsArea">
+    <div class="container">
+      <div class="skillsContent">
+        <header class="skillsHeader">
+          <span class="skillsLabel">Expertise</span>
+          <div class="skillsRule"></div>
+        </header>
+        <!-- skills cards -->
+        <div class="skillsGrid">
+          <div class="skillItem">Python</div>
+          <div class="skillItem">Flask</div>
+          <div class="skillItem">JavaScript(Basic)</div>
+          <div class="skillItem">HTML & CSS</div>
+
+          <div class="skillItem">Firebase Firestore</div>
+          <div class="skillItem">REST APIs</div>
+          <div class="skillItem">GenAI Integration</div>
+          <div class="skillItem">LangChain</div>
+
+          <div class="skillItem">Git & GitHub</div>
+          <div class="skillItem">Tkinter</div>
+          <div class="skillItem">Responsive UI</div>
+          <div class="skillItem">Render Deployment</div>
+
+          <div class="skillItem">XAMPP</div>
+          <div class="skillItem">Animations (CSS & js)</div>
+          <div class="skillItem">Email Automation</div>
+
+        </div>
+        <div class="numbersRow">
+          <div class="statItem">
+            <div class="statNum">10+</div>
+            <div class="statLabel">Hands-on project experience</div>
+          </div>
+          <div class="statItem">
+            <div class="statNum">3+</div>
+            <div class="statLabel">Major Projects</div>
+          </div>
+          <div class="statItem">
+            <div class="statNum">30+</div>
+            <div class="statLabel">Features Built</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Projects -->
+  <section id="work" class="projectSection">
+    <div class="container">
+      <div class="projectContent">
+        <header class="projectHeader">
+          <span class="projectLabel">My Projects</span>
+          <div class="projectRule"></div>
+        </header>
+        <div class="projectList">
+          <!-- Project:1 -->
+          <article class="projectCard">
+            <div class="projectRow">
+              <div class="projectThumb">
+                <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=1400&auto=format&"
+                  alt="AI For Loan Approval">
+              </div>
+              <div class="projectInfo">
+                <div class="projectRef">01</div>
+                <h3 class="projectTitle">AI For Loan Approval</h3>
+                <p class="projectDesc">
+                  A smart loan approval system using Flask, Firebase, LangChain, and Gemini that automates KYC,
+                  underwriting, and sanction letters.
+                  A Supervisor Agent manages all tasks through an intelligent chat interface.
+                </p>
+                <div class="techTags">
+                  <span class="techTag">Python</span>
+                  <span class="techTag">Flask</span>
+                  <span class="techTag">Gemini LLM</span>
+                  <span class="techTag">LangChain</span>
+                </div>
+                <div class="projectLinks">
+                  <a href="https://github.com/princechauhann0/AI-LoanApproval" class="projAction" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    <span>View Code</span>
+                  </a>
+                  <a href="https://ai-loanapproval.onrender.com/" class="projAction" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Project: Task Management System -->
+          <article class="projectCard">
+            <div class="projectRow reverseLayout">
+              <div class="projectThumb">
+                <img
+                  src="https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Flask Contact Form">
+              </div>
+              <div class="projectInfo">
+                <div class="projectRef">02</div>
+                <h3 class="projectTitle">Flask Contact Form</h3>
+                <p class="projectDesc">
+                  This is a Flask web application that is a basic blog and contact site.
+                  It has several static pages (Home, About, Post, and Contact) and a working contact form that saves
+                  messages from the users into a database and sends them to the admin's email box using Flask-Mail.
+                </p>
+                <div class="techTags">
+                  <span class="techTag">Pyhton</span>
+                  <!-- <span class="techTag">TypeScript</span>
+                  <span class="techTag">MongoDB</span> -->
+                </div>
+                <div class="projectLinks">
+                  <a href="https://github.com/princechauhann0/Flask-Contact-App" class="projAction" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    <span>View Code</span>
+                  </a>
+                  <a href="https://Flask-Contact-App.onrender.com" class="projAction" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Project: Fitness Tracking App -->
+          <article class="projectCard">
+            <div class="projectRow">
+              <div class="projectThumb">
+                <img
+                  src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                  alt="Tkinter Login Form">
+              </div>
+              <div class="projectInfo">
+                <div class="projectRef">03</div>
+                <h3 class="projectTitle">Tkinter Login Form</h3>
+                <p class="projectDesc">
+                  A simple Tkinter-based Python login app with username/password validation, image support, and popup
+                  alerts.
+                  Demonstrates basic GUI development and user authentication..
+                </p>
+                <div class="techTags">
+                  <span class="techTag">Python</span>
+                  <!-- <span class="techTag">GraphQL</span>
+                  <span class="techTag">AWS</span> -->
+                </div>
+                <div class="projectLinks">
+                  <a href="https://github.com/princechauhann0/Tkinter-Login-Form" class="projAction" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    <span>View Code</span>
+                  </a>
+                  <!-- <a href="https://demo.com" class="projAction" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span>Live Demo</span>
+                  </a> -->
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact form -->
+
+  <section id="contact-section" class="contactArea">
+    <div class="container">
+      <div class="contactContent">
+        <header class="contactHeader">
+          <span class="contactLabel">Get In Touch</span>
+          <div class="contactRule"></div>
+        </header>
+        <div class="contactWrap">
+          <div class="contactDetails">
+            <div class="contactIntro">
+              <h2>Let's work together</h2>
+              <p>I'm always interested in hearing about new projects and opportunities.</p>
+            </div>
+            <div class="contactCards">
+              <div class="detailRow">
+                <div class="iconBlock">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contactLabelText">Email</div>
+                  <a href="mailto:erprincechauhan@gmail.com">erprincechauhan@gmail.com</a>
+                </div>
+              </div>
+              <div class="detailRow">
+                <div class="iconBlock">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contactLabelText">Phone</div>
+                  <a href="tel:+917042562301">+91 7042562301</a>
+                </div>
+              </div>
+              <div class="detailRow">
+                <div class="iconBlock">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contactLabelText">Location</div>
+                  <div>New Delhi, India</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contactFormWrap">
+            <form id="contact-form" class="contactForm" action="/contact" method="POST">
+
+              <div class="formField">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+              <div class="formField">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="your.email@example.com" required>
+              </div>
+              <div class="formField">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..."
+                  required></textarea>
+              </div>
+              <button type="submit" class="primaryBtn btnFull">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- page footer -->
+  <footer class="footerSection">
+    <div class="container">
+      <div class="footerWrap">
+        <div class="footerDetails">
+          <div class="footerName">Prince Chauhan</div>
+          <div class="footerRole">Python Developer — AI & Automation | Backend Systems</div>
+        </div>
+        <nav class="footerNav">
+          <a href="https://github.com/princechauhann0" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/prince-chauhan-692870370/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">LinkedIn</a>
+          <a href="mailto:erprincechauhan@gmail.com" aria-label="Email">Email</a>
+        </nav>
+      </div>
+      <div class="copyrightRow">
+        <p>© <span id="current-year"></span> All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
