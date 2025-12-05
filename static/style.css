@@ -742,11 +742,14 @@ button {
 
 .projectThumb,
 .projectInfo {
-  min-width: 0;
+  flex: 1 1 0;
+  max-width: 50%;
+  min-width: 0 !important;
 }
-
-body, html {
-  overflow-x: hidden !important;
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
 }
 
 /*Animations*/
@@ -802,3 +805,6 @@ body, html {
   .heroBtnRow .outlineBtn { width: 100%; }
 }
 
+body, html {
+  overflow-x: hidden !important;
+}
