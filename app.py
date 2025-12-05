@@ -10,7 +10,7 @@ from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 CORS(app)
 
-with open("config.json", "r") as f:
+with open("/etc/secrets/config.json", "r") as f:
     config = json.load(f)
 
 PROJECT_ID = config["firebase_project_id"]
