@@ -20,6 +20,12 @@ body {
   line-height: 1.6;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+
 /* Images, Links, Buttons */
 img {
   max-width: 100%;
@@ -44,8 +50,9 @@ button {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0;   /* remove global padding */
 }
+
 
 /*Section Header Styles*/
 
@@ -159,7 +166,15 @@ button {
   color: #fff;
   position: relative;
   overflow: hidden;
+  padding: 0 !important;
+  
 }
+
+.heroContainer .container {
+  padding: 0;          /* remove side padding */
+  max-width: 1200px;   /* keep centered layout */
+}
+
 
 .heroGrid {
   position: absolute;
@@ -174,6 +189,7 @@ button {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.8) 100%);
+
 }
 
 .contentWrap {
@@ -181,6 +197,17 @@ button {
   z-index: 10;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+/* FIX: Make scroll arrow clickable */
+.heroGrid,
+.heroVignette {
+  z-index: 1;
+}
+
+.contentWrap,
+.scrollIndicator {
+  position: relative;
+  z-index: 5;
 }
 
 .heroInner {
@@ -211,7 +238,7 @@ button {
 }
 
 .subTitle {
-  font-size: clamp(24px,3vw,36px);
+  font-size: clamp(20px,3vw,30px);
   color: rgba(255,255,255,0.6);
   margin-bottom: 32px;
   letter-spacing: .05em;
@@ -389,12 +416,12 @@ button {
   position: relative;
 }
 
-.projectRow {
+/* .projectRow {
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
   align-items: start;
-}
+} */
 
 .projectRow {
   display: flex;
@@ -703,6 +730,25 @@ button {
   font-size: 14px;
 }
 
+
+.projectRow {
+  display: flex !important;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.projectThumb,
+.projectInfo {
+  min-width: 0;
+}
+
+body, html {
+  overflow-x: hidden !important;
+}
+
 /*Animations*/
 
 @keyframes fadeIn {
@@ -731,6 +777,7 @@ button {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+
 
 /*Breakpoints for Responsiveness*/
 

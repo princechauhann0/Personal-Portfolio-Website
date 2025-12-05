@@ -18,55 +18,61 @@
   <header id="intro" class="heroContainer">
     <div class="heroGrid" aria-hidden="true"></div>
     <div class="heroVignette" aria-hidden="true"></div>
-    <div class="contentWrap">
-      <div class="heroInner">
-        <div class="freelanceTag">
-          <span>Available for freelance work</span>
+
+    <!-- ⭐ ADDED CONTAINER -->
+    <div class="container">
+
+      <div class="contentWrap">
+        <div class="heroInner">
+          <div class="freelanceTag">
+            <span>Available for freelance work</span>
+          </div>
+          <h1 class="mainTitle">
+            Hi, I'm <span id="element"></span>
+          </h1>
+          <p class="subTitle">Python Developer — AI & Automation | Backend Systems </p>
+          <p class="heroText">
+            I build smart, efficient applications using Python, Flask, APIs, automation, and clean design principles.
+            I enjoy turning ideas into real, working solutions that solve problems and provide great user experiences.
+          </p>
+          <div class="heroBtnRow">
+            <button class="primaryBtn" onclick="scrollToSection('work')">View Projects</button>
+            <button class="outlineBtn" onclick="scrollToSection('contact-section')">Contact Me</button>
+          </div>
+          <nav class="heroSocialRow">
+            <a href="https://github.com/princechauhann0" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/prince-chauhan-692870370/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="mailto:erprincechauhan@gmail.com" aria-label="Email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </nav>
         </div>
-        <h1 class="mainTitle">
-          Hi, I'm <span id="element"></span>
-        </h1>
-        <p class="subTitle">Python Developer — AI & Automation | Backend Systems </p>
-        <p class="heroText">
-          I build smart, efficient applications using Python, Flask, APIs, automation, and clean design principles.
-          I enjoy turning ideas into real, working solutions that solve problems and provide great user experiences.
-        </p>
-        <div class="heroBtnRow">
-          <button class="primaryBtn" onclick="scrollToSection('work')">View Projects</button>
-          <button class="outlineBtn" onclick="scrollToSection('contact-section')">Contact Me</button>
-        </div>
-        <nav class="heroSocialRow">
-          <a href="https://github.com/princechauhann0" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <!-- GitHub SVG Icon -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/prince-chauhan-692870370/" target="_blank" rel="noopener noreferrer"
-            aria-label="LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-              <rect x="2" y="9" width="4" height="12" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-          </a>
-          <a href="mailto:erprincechauhan@gmail.com" aria-label="Email">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-          </a>
-        </nav>
       </div>
-    </div>
-    <button class="scrollIndicator" onclick="scrollToSection('profile-section')" aria-label="Scroll Down">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="12" y1="5" x2="12" y2="19" />
-        <polyline points="19 12 12 19 5 12" />
-      </svg>
-    </button>
+
+      <button class="scrollIndicator" onclick="scrollToSection('profile-section')" aria-label="Scroll Down">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19" />
+          <polyline points="19 12 12 19 5 12" />
+        </svg>
+      </button>
+    </div> <!-- ⭐ CONTAINER END -->
   </header>
+
 
   <!-- About Section -->
   <main id="profile-section" class="aboutSection">
