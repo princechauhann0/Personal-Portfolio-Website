@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for
 from flask_cors import CORS
 import smtplib
 import ssl
+import os
 import json
 import requests
 from email.mime.text import MIMEText
@@ -10,8 +11,17 @@ from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 CORS(app)
 
-with open("/etc/secrets/config.json", "r") as f:
-    config = json.load(f)
+config_path = "/etc/secrets/config.json"  # Render secret mount
+
+# If the file exists (Render), load it
+if os.path.exists(config_path):
+    with open(config_path, "r") as f:
+        config = json.load(f)
+
+# Else load from local config.json
+else:
+    with open("config.json", "r") as f:
+        config = json.load(f)
 
 PROJECT_ID = config["firebase_project_id"]
 API_KEY = config["firebase_api_key"]
