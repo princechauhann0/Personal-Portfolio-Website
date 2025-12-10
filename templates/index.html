@@ -33,6 +33,11 @@
           </p>
           <div class="heroBtnRow">
             <button class="primaryBtn" onclick="scrollToSection('work')">View Projects</button>
+
+            <a href="{{ url_for('static', filename='prince_resume.pdf') }}" class="outlineBtn" target="_blank">
+              Resume
+            </a>
+
             <button class="outlineBtn" onclick="scrollToSection('contact-section')">Contact Me</button>
           </div>
           <nav class="heroSocialRow">
@@ -71,7 +76,7 @@
   </header>
 
 
- 
+
   <main id="profile-section" class="aboutSection">
     <div class="container">
       <div class="aboutContent">
@@ -405,5 +410,3 @@
 </body>
 
 </html>
-
-

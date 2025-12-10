@@ -41,10 +41,6 @@ button {
   padding: 0 !important;
 }
 
-/* ------------------------------------------------ */
-/*  SECTION HEADERS                                 */
-/* ------------------------------------------------ */
-
 .aboutLabel,
 .skillsLabel,
 .projectLabel,
@@ -70,10 +66,6 @@ button {
 .contactArea .contactRule {
   background: #fff;
 }
-
-/* ------------------------------------------------ */
-/*  BUTTONS                                         */
-/* ------------------------------------------------ */
 
 .primaryBtn,
 .outlineBtn,
@@ -140,10 +132,6 @@ button {
   background: rgba(255,255,255,0.1) !important;
   color: #fff !important;
 }
-
-/* ------------------------------------------------ */
-/*  HERO SECTION                                    */
-/* ------------------------------------------------ */
 
 .heroContainer {
   min-height: 100vh;
@@ -255,10 +243,6 @@ button {
   color: #fff;
 }
 
-/* ------------------------------------------------ */
-/*  ABOUT SECTION                                   */
-/* ------------------------------------------------ */
-
 .aboutSection {
   padding: 128px 0;
   background: #ffffff;
@@ -307,10 +291,6 @@ button {
   margin-bottom: 12px;
 }
 
-/* ------------------------------------------------ */
-/*  SKILLS SECTION                                  */
-/* ------------------------------------------------ */
-
 .skillsArea {
   padding: 128px 0;
   background: #000;
@@ -355,10 +335,6 @@ button {
   letter-spacing: .1em;
   font-size: 12px;
 }
-
-/* ------------------------------------------------ */
-/*  PROJECTS SECTION                                */
-/* ------------------------------------------------ */
 
 .projectSection {
   padding: 128px 0;
@@ -489,10 +465,6 @@ button {
   border-color: transparent;
 }
 
-/* ------------------------------------------------ */
-/*  CONTACT SECTION                                 */
-/* ------------------------------------------------ */
-
 .contactArea {
   padding: 128px 0;
   background: #000;
@@ -587,10 +559,6 @@ button {
   border-color: #fff;
 }
 
-/* ------------------------------------------------ */
-/*  FOOTER                                          */
-/* ------------------------------------------------ */
-
 .footerSection {
   background: #f1f1f1;
   border-top: 1px solid rgba(0,0,0,0.1);
@@ -652,21 +620,11 @@ copyrightRow p {
   transition: all 1s ease;
 }
 
-
-
-/* ------------------------------------------------ */
-/*  ANIMATIONS                                      */
-/* ------------------------------------------------ */
-
 @keyframes bounce {
   0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0);}
   40% { transform: translateX(-50%) translateY(-10px);}
   60% { transform: translateX(-50%) translateY(-5px);}
 }
-
-/* ------------------------------------------------ */
-/*  RESPONSIVE                                      */
-/* ------------------------------------------------ */
 
 @media (min-width: 768px) {
   .contactWrap {
@@ -678,8 +636,6 @@ copyrightRow p {
   .aboutMain {
     grid-template-columns: 1fr 1fr;
   }
-
-  /* THE BAD LINE IS REMOVED HERE */
 
   .reverseLayout .projectThumb {
     order: 2;
@@ -703,5 +659,96 @@ copyrightRow p {
   .heroBtnRow .primaryBtn,
   .heroBtnRow .outlineBtn {
     width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  html {
+    font-size: 18px; /* Bigger base font on phones */
+  }
+
+  .mainTitle {
+    font-size: 34px !important;
+    line-height: 1.2;
+  }
+
+  .subTitle {
+    font-size: 18px !important;
+  }
+
+  .heroText {
+    font-size: 15px !important;
+    max-width: 90%;
+  }
+
+  .contentWrap {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .heroBtnRow {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .heroBtnRow button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .aboutSection,
+  .skillsArea,
+  .projectSection,
+  .contactArea {
+    padding: 50px 0 !important; /* Reduce huge spacing */
+  }
+
+  .projectRow {
+    flex-direction: column !important;
+  }
+
+  .projectTitle {
+    font-size: 22px !important;
+  }
+
+  .projectDesc {
+    font-size: 15px !important;
+    line-height: 1.5;
+  }
+
+  .projectRef {
+    display: none;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .skillItem {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .numbersRow {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .statNum {
+    font-size: 32px !important;
+  }
+
+  .contactIntro h2 {
+    font-size: 26px !important;
+  }
+
+  .contactIntro p {
+    font-size: 15px;
+  }
+
+  .footerName {
+    font-size: 20px !important;
   }
 }
