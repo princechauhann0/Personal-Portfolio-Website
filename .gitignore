@@ -5,7 +5,7 @@ __pycache__/
 config.json
 # C extensions
 *.so
-
+.desktop.ini
 # Distribution / packaging
 .Python
 build/
