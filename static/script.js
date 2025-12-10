@@ -129,5 +129,3 @@
   };
 })();
 
-
-window.scrollToSection = scrollToSection;
