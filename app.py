@@ -5,6 +5,7 @@ import ssl
 import os
 import json
 import requests
+import traceback
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -13,12 +14,10 @@ CORS(app)
 
 config_path = "/etc/secrets/config.json"  # Render secret mount
 
-# If the file exists (Render), load it
 if os.path.exists(config_path):
     with open(config_path, "r") as f:
         config = json.load(f)
 
-# Else load from local config.json
 else:
     with open("config.json", "r") as f:
         config = json.load(f)
@@ -49,16 +48,17 @@ def contact():
             }
         }
 
-        # FIXED: Proper request with headers + debugging
         response = requests.post(
             FIRESTORE_URL,
             headers={"Content-Type": "application/json"},
             json=firestore_payload
         )
 
-        print("FIRESTORE RESPONSE:", response.status_code, response.text)
+        print("FIRESTORE:", response.status_code, response.text)
 
-        # send email
+        if response.status_code >= 300:
+            print("Firestore failed, continuing without stopping...")
+
         subject = f"New Portfolio Contact — {name}"
         body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
 
@@ -68,16 +68,23 @@ def contact():
         msg["Subject"] = subject
         msg.attach(MIMEText(body, "plain"))
 
-        context = ssl.create_default_context()
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-            server.login(GMAIL_USER, GMAIL_APP_PASSWORD)
-            server.sendmail(GMAIL_USER, GMAIL_USER, msg.as_string())
+        try:
+            context = ssl.create_default_context()
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+                server.login(GMAIL_USER, GMAIL_APP_PASSWORD)
+                server.sendmail(GMAIL_USER, GMAIL_USER, msg.as_string())
+
+        except Exception as mail_error:
+            print("MAIL ERROR:", mail_error)
 
         return redirect(url_for("home"))
 
     except Exception as e:
-        print("ERROR:", e)
+        print("MAIN ERROR:", e)
+        traceback.print_exc()
         return jsonify({"status": "error", "message": str(e)}), 500
+
+
 
 
 if __name__ == "__main__":
