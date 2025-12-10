@@ -1,6 +1,3 @@
-Global & Reset Styles
-
-
 
 * {
   margin: 0;
@@ -20,13 +17,6 @@ body {
   line-height: 1.6;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden !important;
-}
-
-
-/* Images, Links, Buttons */
 img {
   max-width: 100%;
   height: auto;
@@ -45,16 +35,15 @@ button {
   cursor: pointer;
 }
 
-/*Layout Utility*/
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;   /* remove global padding */
+  padding: 0 !important;
 }
 
-
-/*Section Header Styles*/
+/* ------------------------------------------------ */
+/*  SECTION HEADERS                                 */
+/* ------------------------------------------------ */
 
 .aboutLabel,
 .skillsLabel,
@@ -82,9 +71,9 @@ button {
   background: #fff;
 }
 
-/* --------------------------- */
-/* BUTTON STYLES – FIXED COPY */
-/* --------------------------- */
+/* ------------------------------------------------ */
+/*  BUTTONS                                         */
+/* ------------------------------------------------ */
 
 .primaryBtn,
 .outlineBtn,
@@ -115,7 +104,6 @@ button {
   background: transparent;
   color: #fff;
   border: 1px solid rgba(255,255,255,0.3);
-  
 }
 
 .outlineBtn:hover {
@@ -135,7 +123,6 @@ button {
   transform: scale(1.06);
 }
 
-/* FIX #1 – ensure hover works even inside animated sections */
 .heroBtnRow .primaryBtn,
 .heroBtnRow .outlineBtn,
 .contactForm .btnFull {
@@ -143,7 +130,6 @@ button {
   z-index: 10;
 }
 
-/* FIX #2 – stable hover that does NOT disappear */
 .heroBtnRow .primaryBtn:hover,
 .contactForm .btnFull:hover {
   background: rgba(255,255,255,0.9) !important;
@@ -155,7 +141,9 @@ button {
   color: #fff !important;
 }
 
-/*Hero Styles*/
+/* ------------------------------------------------ */
+/*  HERO SECTION                                    */
+/* ------------------------------------------------ */
 
 .heroContainer {
   min-height: 100vh;
@@ -166,15 +154,7 @@ button {
   color: #fff;
   position: relative;
   overflow: hidden;
-  padding: 0 !important;
-  
 }
-
-.heroContainer .container {
-  padding: 0;          /* remove side padding */
-  max-width: 1200px;   /* keep centered layout */
-}
-
 
 .heroGrid {
   position: absolute;
@@ -189,7 +169,6 @@ button {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.8) 100%);
-
 }
 
 .contentWrap {
@@ -198,24 +177,12 @@ button {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-/* FIX: Make scroll arrow clickable */
-.heroGrid,
-.heroVignette {
-  z-index: 1;
-}
-
-.contentWrap,
-.scrollIndicator {
-  position: relative;
-  z-index: 5;
-}
 
 .heroInner {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Availability Tag */
 .freelanceTag {
   display: inline-block;
   padding: 8px 24px;
@@ -224,11 +191,11 @@ button {
   margin-bottom: 32px;
   backdrop-filter: blur(10px);
 }
+
 .freelanceTag span {
   color: rgba(255,255,255,0.7);
 }
 
-/* Hero Titles */
 .mainTitle {
   font-size: clamp(76px,10vw,70.15px);
   font-weight: 700;
@@ -252,7 +219,6 @@ button {
   margin-bottom: 48px;
 }
 
-/* Hero Buttons and Social */
 .heroBtnRow {
   display: flex;
   flex-wrap: wrap;
@@ -275,7 +241,6 @@ button {
   color: #fff;
 }
 
-/* Scroll Indicator */
 .scrollIndicator {
   position: absolute;
   left: 50%;
@@ -290,15 +255,14 @@ button {
   color: #fff;
 }
 
-/* About/ Profile Section*/
+/* ------------------------------------------------ */
+/*  ABOUT SECTION                                   */
+/* ------------------------------------------------ */
 
 .aboutSection {
   padding: 128px 0;
   background: #ffffff;
 }
-
-/* .aboutContent {
-} */
 
 .aboutMain {
   display: grid;
@@ -324,7 +288,6 @@ button {
   line-height: 1.7;
 }
 
-/* Philosophy, Approach, Goal Cards */
 .aboutHighlights {
   display: flex;
   flex-direction: column;
@@ -344,7 +307,9 @@ button {
   margin-bottom: 12px;
 }
 
-/*Skills Section*/
+/* ------------------------------------------------ */
+/*  SKILLS SECTION                                  */
+/* ------------------------------------------------ */
 
 .skillsArea {
   padding: 128px 0;
@@ -372,15 +337,10 @@ button {
   color: #fff;
 }
 
-/* Experience, Projects, Clients */
 .numbersRow {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 48px;
-}
-
-.statItem {
-  text-align: left;
 }
 
 .statNum {
@@ -396,15 +356,14 @@ button {
   font-size: 12px;
 }
 
-/*Projects Section*/
+/* ------------------------------------------------ */
+/*  PROJECTS SECTION                                */
+/* ------------------------------------------------ */
 
-/* responsive tweak */
 .projectSection {
   padding: 128px 0;
   background: #f9f9f9;
 }
-
-/* .projectContent { } */
 
 .projectList {
   display: flex;
@@ -416,61 +375,28 @@ button {
   position: relative;
 }
 
-/* .projectRow {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-  align-items: start;
-} */
-
 .projectRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   width: 100%;
-}
-/* FIX PROJECT LAYOUT LIKE FIRST PROJECT CARD */
-.projectRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-.projectThumb {
-  flex: 1;
-  max-width: 50%;
-}
-
-.projectThumb img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
+.projectThumb,
 .projectInfo {
-  flex: 1;
+  flex: 1 1 0;
   max-width: 50%;
-}
-
-.projectDesc {
-  max-width: 90%;
-  line-height: 1.6;
-}
-
-
-.reverseLayout .projectThumb {
-  order: 2;
+  min-width: 0;
 }
 
 .projectThumb {
   position: relative;
   background: #000;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
 }
 
 .projectThumb img {
@@ -491,7 +417,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top,rgba(0,0,0,0.5),transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
 }
 
 .projectInfo {
@@ -518,7 +444,6 @@ button {
   font-size: 18px;
   color: rgba(0,0,0,0.6);
   line-height: 1.7;
-  margin-top: -2px;
   margin-bottom: 24px;
 }
 
@@ -564,9 +489,10 @@ button {
   border-color: transparent;
 }
 
-/*Contact Section*/
+/* ------------------------------------------------ */
+/*  CONTACT SECTION                                 */
+/* ------------------------------------------------ */
 
-/* contact form */
 .contactArea {
   padding: 128px 0;
   background: #000;
@@ -601,7 +527,6 @@ button {
 .detailRow {
   display: flex;
   gap: 16px;
-  align-items: flex-start;
 }
 
 .iconBlock {
@@ -619,19 +544,8 @@ button {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .1em;
-  margin-bottom: 4px;
 }
 
-.detailRow a {
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.detailRow a:hover {
-  color: rgba(255,255,255,0.7);
-}
-
-/* Contact Form Styles */
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -673,12 +587,9 @@ button {
   border-color: #fff;
 }
 
-.formField textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-/*Footer Styles*/
+/* ------------------------------------------------ */
+/*  FOOTER                                          */
+/* ------------------------------------------------ */
 
 .footerSection {
   background: #f1f1f1;
@@ -696,25 +607,24 @@ button {
   align-items: center;
 }
 
-.footerDetails .footerName {
+.footerName {
   font-size: 28px;
   color: #000;
-  margin-bottom: 6px;
 }
 
-.footerDetails .footerRole {
+.footerRole {
   color: rgba(0,0,0,0.4);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .1em;
 }
 
-/* Footer links: simple underline effect on hover */
 .footerNav a {
   margin-left: 16px;
   color: rgba(0,0,0,0.4);
   transition: color 0.3s;
 }
+
 .footerNav a:hover {
   color: #000;
 }
@@ -725,86 +635,73 @@ button {
   margin-top: 32px;
   text-align: center;
 }
-.copyrightRow p {
+
+copyrightRow p {
   color: rgba(0,0,0,0.4);
   font-size: 14px;
 }
 
-
-.projectRow {
-  display: flex !important;
-  justify-content: space-between;
-  gap: 40px;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+.preReveal {
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.projectThumb,
-.projectInfo {
-  flex: 1 1 0;
-  max-width: 50%;
-  min-width: 0 !important;
-}
-img {
-  max-width: 100%;
-  width: 100%;
-  display: block;
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease;
 }
 
-/*Animations*/
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px);}
-  to   { opacity: 1; transform: translateY(0);}
-}
+
+/* ------------------------------------------------ */
+/*  ANIMATIONS                                      */
+/* ------------------------------------------------ */
+
 @keyframes bounce {
   0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0);}
   40% { transform: translateX(-50%) translateY(-10px);}
   60% { transform: translateX(-50%) translateY(-5px);}
 }
 
-/* .fade and .fade-up are used by JS scroll-reveal */
+/* ------------------------------------------------ */
+/*  RESPONSIVE                                      */
+/* ------------------------------------------------ */
 
-.preReveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.revealed {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-
-/*Breakpoints for Responsiveness*/
-
-/* tweak for medium screens */
 @media (min-width: 768px) {
-  .contactWrap { grid-template-columns: 2fr 3fr; }
+  .contactWrap {
+    grid-template-columns: 2fr 3fr;
+  }
 }
 
-/* extra wide: dual column layouts */
 @media (min-width: 1024px) {
-  .aboutMain      { grid-template-columns: 1fr 1fr; }
-  .projectRow     { grid-template-columns: 1fr 1fr; }
-  .reverseLayout .projectThumb { order: 2; }
-  .reverseLayout .projectInfo  { order: 1; }
-  .skillsGrid     { grid-template-columns: repeat(5,1fr); }
+  .aboutMain {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* THE BAD LINE IS REMOVED HERE */
+
+  .reverseLayout .projectThumb {
+    order: 2;
+  }
+
+  .reverseLayout .projectInfo {
+    order: 1;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(5,1fr);
+  }
 }
 
-/* mobile tweak for hero actions */
 @media (max-width: 640px) {
-  .heroBtnRow   { flex-direction: column; width: 100%; }
-  .heroBtnRow .primaryBtn,
-  .heroBtnRow .outlineBtn { width: 100%; }
-}
+  .heroBtnRow {
+    flex-direction: column;
+    width: 100%;
+  }
 
-body, html {
-  overflow-x: hidden !important;
+  .heroBtnRow .primaryBtn,
+  .heroBtnRow .outlineBtn {
+    width: 100%;
+  }
 }

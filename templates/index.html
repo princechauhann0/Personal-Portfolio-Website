@@ -5,21 +5,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Prince Chauhan — Portfolio</title>
-  <!-- Import Poppins font for the page -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Custom stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-  <!-- main hero intro -->
   <header id="intro" class="heroContainer">
     <div class="heroGrid" aria-hidden="true"></div>
     <div class="heroVignette" aria-hidden="true"></div>
 
-    <!-- ⭐ ADDED CONTAINER -->
     <div class="container">
 
       <div class="contentWrap">
@@ -71,11 +67,11 @@
           <polyline points="19 12 12 19 5 12" />
         </svg>
       </button>
-    </div> <!-- ⭐ CONTAINER END -->
+    </div>
   </header>
 
 
-  <!-- About Section -->
+ 
   <main id="profile-section" class="aboutSection">
     <div class="container">
       <div class="aboutContent">
@@ -87,11 +83,11 @@
           <div class="aboutSummary">
             <p class="aboutLead">
               I'm a Python developer who loves building smart, efficient applications — from automation tools to backend
-              APIs and AI-powered features.
+              APIs and AI-powered features.</p>
             <p class="aboutDetail">
-              Over the past two years, I’ve created 10+ hands-on projects, including an AI-powered loan approval system,
-              contact & automation tools, and full Python-based applications. Through these projects, I’ve built strong
-              skills in Python, Flask, REST APIs, Firebase, automation, and backend development.<br><br>
+              Over the past two years, I've created 10+ hands-on projects, including an AI-powered loan approval system,
+              contact & automation tools, and full Python-based applications. Through these projects, I've built strong
+              skills in Python, Flask, REST APIs, Firebase, automation, and backend development.<br>
 
               I focus on writing clean, maintainable code and creating solutions that are efficient, scalable, and
               meaningful.
@@ -118,7 +114,6 @@
     </div>
   </main>
 
-  <!-- Skills Section -->
   <section id="skills" class="skillsArea">
     <div class="container">
       <div class="skillsContent">
@@ -166,7 +161,6 @@
     </div>
   </section>
 
-  <!-- Selected Projects -->
   <section id="work" class="projectSection">
     <div class="container">
       <div class="projectContent">
@@ -175,11 +169,11 @@
           <div class="projectRule"></div>
         </header>
         <div class="projectList">
-          <!-- Project:1 -->
+          <!-- Project 1 Loan approval AI -->
           <article class="projectCard">
             <div class="projectRow">
               <div class="projectThumb">
-                <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=1400&auto=format&"
+                <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=1400&auto=format"
                   alt="AI For Loan Approval">
               </div>
               <div class="projectInfo">
@@ -218,7 +212,7 @@
               </div>
             </div>
           </article>
-          <!-- Project: Task Management System -->
+          <!-- Project 2 Flask Contact Form -->
           <article class="projectCard">
             <div class="projectRow reverseLayout">
               <div class="projectThumb">
@@ -236,8 +230,8 @@
                 </p>
                 <div class="techTags">
                   <span class="techTag">Pyhton</span>
-                  <!-- <span class="techTag">TypeScript</span>
-                  <span class="techTag">MongoDB</span> -->
+                  <span class="techTag">Flask</span>
+                  <span class="techTag">Xampp</span>
                 </div>
                 <div class="projectLinks">
                   <a href="https://github.com/princechauhann0/Flask-Contact-App" class="projAction" target="_blank"
@@ -261,7 +255,7 @@
               </div>
             </div>
           </article>
-          <!-- Project: Fitness Tracking App -->
+          <!-- Projec 3 Tkinter login form -->
           <article class="projectCard">
             <div class="projectRow">
               <div class="projectThumb">
@@ -279,8 +273,8 @@
                 </p>
                 <div class="techTags">
                   <span class="techTag">Python</span>
-                  <!-- <span class="techTag">GraphQL</span>
-                  <span class="techTag">AWS</span> -->
+                  <span class="techTag">Tkinter</span>
+                  <!-- <span class="techTag">AWS</span> -->
                 </div>
                 <div class="projectLinks">
                   <a href="https://github.com/princechauhann0/Tkinter-Login-Form" class="projAction" target="_blank"
@@ -307,8 +301,6 @@
       </div>
     </div>
   </section>
-
-  <!-- contact form -->
 
   <section id="contact-section" class="contactArea">
     <div class="container">
@@ -386,7 +378,6 @@
     </div>
   </section>
 
-  <!-- page footer -->
   <footer class="footerSection">
     <div class="container">
       <div class="footerWrap">
@@ -414,3 +405,5 @@
 </body>
 
 </html>
+
+
