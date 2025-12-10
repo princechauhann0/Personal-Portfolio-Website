@@ -128,3 +128,4 @@
     }
   };
 })();
+window.scrollToSection = scrollToSection;
